@@ -8,16 +8,18 @@ from django.contrib.auth.models import User
     password=models.CharField(max_length=20)'''
 class clubevents(models.Model) :
     cname=models.CharField(max_length=30)
+    cdesc=models.CharField(max_length=400)
     cemail=models.CharField(max_length=30)
     ename=models.CharField(max_length=100)
-    edate=models.CharField(max_length=30)
+    edate=models.DateField()
     evenue=models.CharField(max_length=100)
     etime=models.CharField(max_length=20)
     etype=models.CharField(max_length=20)
-    edesc=models.CharField(max_length=400)
+    edesc=models.CharField(max_length=4000)
     eligibility=models.CharField(max_length=30)
     elink=models.CharField(max_length=400)
-    efee=models.CharField(max_length=400)
+    efee=models.CharField(max_length=20)
+    eimg=models.CharField(max_length=400)
 
 class Profile(models.Model):
     user = models.OneToOneField(User , on_delete=models.CASCADE)
@@ -27,3 +29,6 @@ class Profile(models.Model):
 
     def _str_(self):
         return self.user.username
+    
+class emailid(models.Model):
+    temail=models.CharField(max_length=30)

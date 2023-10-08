@@ -10,13 +10,13 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 body {
-  background-color: #FFF5E0;
+  background-color: #65b7e0;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
 }
 .container {
-            background-image: url('bg2.jpeg'); /* Replace 'your-image-url.jpg' with the URL or path to your image */
+            /*background-image: url('bg2.jpeg');  Replace 'your-image-url.jpg' with the URL or path to your image */
             background-size: cover; /* Adjust the background size as needed */
             background-repeat: no-repeat; /* Prevent the background image from repeating */
             width: 100%; /* Set the width of the container */
@@ -52,12 +52,12 @@ width:150px;
             justify-content: space-between;
         }
 </style>
-    <body style="background-color:#FFF5E0">
+    <body style="background-color:#65b7e0">
         <nav class="navbar" style="background-color: #141E46;">
             <div class="container-fluid">
               <a class="navbar-brand" href="https://www.cbit.ac.in/" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Chaitanya_Bharathi_Institute_of_Technology_logo.png" alt="Logo" width="30" height="34" class="d-inline-block align-text-top">
-                <span style="vertical-align: middle">&nbsp;Chaitanya Bharathi Institute of Technology</span>
+                <span style="vertical-align: middle">&nbsp;Event Management System</span>
               </a>
 
               <form class="d-flex" role="search">
@@ -89,6 +89,7 @@ width:150px;
                   {% csrf_token %}
                   <input type="hidden" class="form-control" name="cname" id="id_tname"  value="{{res.cname}}" >
                 <input type="hidden" class="form-control" name="cemail" id="id_temail"  value="{{res.cemail}}" >
+                <input type="hidden" class="form-control" name="cdesc" id="id_cdesc"  value="{{res.cdesc}}" >
                       <label for="firstName">Name of Event<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label>
                       <input type="text" class="form-control" id="firstName" name="ename" placeholder="" value="" required="">
                       <div class="invalid-feedback">
@@ -110,14 +111,14 @@ width:150px;
         <label for="date">Date of Event<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
         <div class="col-5">
             
-            <input id="startDate" name="edate" class="form-control" type="text" />
+            <input type="date" id="startDate" name="edate" class="form-control" />
             <span id="startDateSelected"></span>
         </div>
     </div><br>
 </div></div>
                   <div class="mb-3">
                     <label for="desc" required="">Description<span class="mand" style="color: #9f330f;">&nbsp;*</span></label>
-                    <textarea class="form-control" id="email" name="edesc" placeholder="A description of the event" rows="5"></textarea>
+                    <input type="text" class="form-control" id="email" name="edesc" placeholder="A description of the event">
                   </div>
                  <!-- <div class="mb-3">
                     <label for="desc" required="">Short Description<span class="mand" style="color: #9f330f;">&nbsp;*</span></label>
@@ -126,11 +127,11 @@ width:150px;
 
                   <div class="mb-3">
                     <label for="desc" required="">Type of event<span class="mand" style="color: #9f330f;">&nbsp;*</span></label>
-                    <textarea class="form-control" id="email" name="etype" placeholder="A description of the event" rows="5"></textarea>
+                    <input type="text" class="form-control" id="email" name="etype" placeholder="A description of the event">
                   </div>
                   <div class="mb-3">
                     <label for="desc" required="">Eligibility<span class="mand" style="color: #9f330f;">&nbsp;*</span></label>
-                    <textarea class="form-control" id="email" name="eligibility" placeholder="A description of the event" rows="5"></textarea>
+                    <input type="text" class="form-control" id="email" name="eligibility" placeholder="A description of the event">
                   </div>
                   <!--<div class="row">
                     <div class="col-md-5 mb-3">
@@ -241,10 +242,15 @@ width:150px;
                         Please enter a correct field.
                       </div>
                     </div>-->
+
+                    <div class="mb-3">
+                      <label for="link">Image URL<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
+                      <input type="text" class="form-control" name="eimg" id="address2" required=" " placeholder="Provide a link for students to register">
+                    </div>
         
                     <div class="mb-3">
                       <label for="link">Registration Link<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
-                      <input type="text" class="form-control" name="elink" id="address2" required=" " placeholder="Provide a link for students to register">
+                      <input type="text" class="form-control" name="elink" id="address1" required=" " placeholder="Provide a link for students to register">
                     </div>
 
                   <div class="col-3">

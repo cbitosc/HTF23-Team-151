@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 
 # Create your views here.
-from events.models import Profile,clubevents
+from events.models import Profile,clubevents,emailid
 from django.contrib import messages
 from django.http import HttpResponse
 from .forms import paperform
@@ -44,6 +44,7 @@ def login_attempt(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
+
         user_obj = User.objects.filter(username = username).first()
         if user_obj is None:
             messages.success(request, 'User not found.')
@@ -58,6 +59,7 @@ def login_attempt(request):
 
         user = authenticate(username = username , password = password)
         if user is None:
+            print(username,password)
             messages.success(request, 'Wrong password.')
             return redirect('/accounts/login')
         
@@ -70,8 +72,11 @@ def login_attempt(request):
 
 def teachview(request) :
     research=clubevents.objects.all()
+    for i in research:
+        if i.cname==username:
+            desc=i.cdesc
     print(research,username)
-    return render(request,'teachview.html',{'research':research,'username':username})
+    return render(request,'teachview.html',{'research':research,'username':username,'desc':desc})
 
 def delete(request, id):
         record_to_delete =clubevents.objects.get(id=id)
@@ -126,7 +131,15 @@ def register_attempt(request):
         username = request.POST.get('username')
         email = request.POST.get('email')
         password = request.POST.get('password')
-        print(password)
+        emails=emailid.objects.all()
+        count=0
+        for i in emails:
+            if i.temail==email:
+                count+=1
+        if count==0:
+            messages.success(request, 'Email does not belong to a club')
+            return redirect('/register')
+
 
         try:
             if User.objects.filter(username = username).first():

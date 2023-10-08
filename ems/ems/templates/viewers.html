@@ -1,10 +1,12 @@
 <html><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Snippet - GoSnippets</title>
+  <title>Viewers</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=YoungSerif">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
   <style></style>
   <script type="text/javascript" src=""></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -15,33 +17,28 @@
       background-color: #FFF5E0;
   }
 </style>
-<body oncontextmenu="return false" class="snippet-body" style="background-color: #BB2525;">
-  <nav class="navbar" style="background-color: #141E46;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="https://www.cbit.ac.in/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Chaitanya_Bharathi_Institute_of_Technology_logo.png" alt="Logo" width="30" height="34" class="d-inline-block align-text-top">
-          <span style="vertical-align: middle">&nbsp;Chaitanya Bharathi Institute of Technology</span>
+<body oncontextmenu="return false" class="snippet-body" style="background-image:url('https://cutewallpaper.org/21/rainy-weather-wallpaper/Wallpaper-MiUI-8-Rainy-Weather-background-Minimal-HD-.png');">
+  <nav class="navbar" style="background-color: #141E46;vertical-align: middle;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.cbit.ac.in/" target="_blank" style="vertical-align: middle;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Chaitanya_Bharathi_Institute_of_Technology_logo.png" alt="Logo" width="30" height="34" class="d-inline-block align-text-top">
+            <span style="vertical-align: middle">&nbsp;Event Management System</span>
         </a>
+<div class="inner" style="vertical-align: middle;padding: 5 0 0 0 ">
+        <form class="d-flex" role="search">
+            {% csrf_token %}
+            <a href="/accounts/login/" style="color: white; text-decoration: none; font-family: 'Young Serif', serif; font-size:20px;vertical-align: middle; ">Login</a>
+            <span style="color: white; padding: 0 6px;vertical-align: middle">|</span>
+            <a href="/register/" style="color: white; text-decoration: none; font-family: 'Young Serif', serif;font-size:20px;vertical-align: middle">Register</a>
+        </form>
+    </div></div>
+</nav>
 
-        <form class="d-flex" role="search">
-          {% csrf_token %}
-          <a href="/accounts/login/"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
-          </svg></a>
-        </form>
-        <form class="d-flex" role="search">
-          {% csrf_token %}
-          <a href="/register/"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
-          </svg></a>
-        </form>
-      </div>
-  </nav>
 <section class="pt-5 pb-5">
 <div class="container">
 <div class="row">
 <div class="col-6">
-<h2 class="mb-3" style="font-family: 'YoungSerif'; color: #FFF9C9"><b>Upcoming Events </b></23>
+<h2 class="mb-3" style="font-family: 'Young Serif', serif; color: #FFF9C9">Upcoming Events </23>
 </div>
 <div class="col-6 text-right">
 <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev" style="background-color: #141E46;">
@@ -118,17 +115,19 @@
 {% for res in research %}
 <div class="col-md-4 mb-3">
   <div class="card">
-      <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
+    <center>
+      <img class="img-fluid" alt="100%x280" style="object-fit:contain;" src={{res.eimg}}></center>
       <div class="card-body">
           <h4 class="card-title">{{res.ename}}</h4>
           <p class="card-text">{{res.desc}}</p>
           <div class="card-details">
               <p class="card-text"><strong>Organised by: </strong> {{res.cname}}</p>
-              <p class="card-text"><strong>Date:</strong> {{res.edate}}</p>
-              <p class="card-text"><strong>Time:</strong> {{res.etime}}</p>
-              <p class="card-text"><strong>Location:</strong> {{res.evenue}}</p>
-              <p class="card-text"><strong>Registration Fee:</strong>Rs {{res.efee}}</p>
-              <p class="card-text"><strong>To register:</strong><a href="{{res.elink}}">{{res.elink}}</a></p>
+              <p class="card-text"><strong>Date: </strong> {{res.edate}}</p>
+              <p class="card-text"><strong>Time: </strong> {{res.etime}}</p>
+              <p class="card-text"><strong>Location: </strong> {{res.evenue}}</p>
+              <p class="card-text"><strong>Registration Fee: </strong>Rs {{res.efee}}</p>
+              <p class="card-text"><strong>Description: </strong>{{res.edesc}}</p>
+              <p class="card-text"><strong>To register: </strong><a href="{{res.elink}}">{{res.elink}}</a></p>
 
           </div>
       </div>

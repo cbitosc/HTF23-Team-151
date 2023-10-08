@@ -10,7 +10,7 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 body {
-  background-color: #FFF5E0;
+  background-color: #65b7e0;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -52,12 +52,12 @@ width:150px;
             justify-content: space-between;
         }
 </style>
-    <body style="background-color:#FFF5E0">
+    <body style="background-color:#65b7e0">
         <nav class="navbar" style="background-color: #141E46;">
             <div class="container-fluid">
               <a class="navbar-brand" href="https://www.cbit.ac.in/" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Chaitanya_Bharathi_Institute_of_Technology_logo.png" alt="Logo" width="30" height="34" class="d-inline-block align-text-top">
-                <span style="vertical-align: middle">&nbsp;Chaitanya Bharathi Institute of Technology</span>
+                <span style="vertical-align: middle">&nbsp;Event Management System</span>
               </a>
 
               <form class="d-flex" role="search">
@@ -76,19 +76,20 @@ width:150px;
                     <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
                   </svg>
                   <br>
-              <h2><b>Add</b></h2>
+              <h2><b>Update</b></h2>
             </div>
             <div class="row">
               <div class="col-2">
 
               </div>
               <div class="col-8">
-                <h4 class="mb-3">Add your Event Details: </h4>
+                <h4 class="mb-3">Update your Event Details: </h4>
                 
                 <form method="POST" action="/update/{{research.id}}" class="needs-validation" novalidate="">
                   {% csrf_token %}
                   <input type="hidden" class="form-control" name="cname" id="id_tname"  value="{{research.cname}}" >
                 <input type="hidden" class="form-control" name="cemail" id="id_temail"  value="{{research.cemail}}" >
+                <input type="hidden" class="form-control" name="cdesc" id="id_temail"  value="{{research.cdesc}}" >
                       <label for="firstName">Name of Event<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label>
                       <input type="text" class="form-control" id="firstName" name="ename" placeholder="" value="{{research.ename}}" required="">
                       <div class="invalid-feedback">
@@ -110,7 +111,7 @@ width:150px;
         <label for="date">Date of Event<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
         <div class="col-5">
             
-            <input id="startDate" name="edate" class="form-control" type="text" value="{{research.edate}}"/>
+            <input id="startDate" name="edate" class="form-control" type="date" value="{{research.edate}}"/>
             <span id="startDateSelected"></span>
         </div>
     </div><br>
@@ -245,6 +246,11 @@ width:150px;
                     <div class="mb-3">
                       <label for="link">Registration Link<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
                       <input type="text" class="form-control" name="elink" id="address2" value="{{research.elink}}" required=" " placeholder="Provide a link for students to register">
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="link">Image URL<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
+                      <input type="text" class="form-control" name="eimg" id="address2" value="{{research.eimg}}" required=" " placeholder="Provide a link for students to register">
                     </div>
 
                   <div class="col-3">
