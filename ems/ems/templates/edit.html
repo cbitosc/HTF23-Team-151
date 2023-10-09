@@ -1,0 +1,264 @@
+<html>
+    <head>
+        <title>123</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    </head>
+    <style>
+        .navbar-brand{
+    color: #FFF9C9;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+body {
+  background-color: #65b7e0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.container {
+            /*sbackground-image: url('bg2.jpeg'); Replace 'your-image-url.jpg' with the URL or path to your image */
+            background-size: cover; /* Adjust the background size as needed */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            width: 100%; /* Set the width of the container */
+            height: 1350px; }
+.selectWrapper{
+  outline: none;
+  border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  background:#cccccc;
+}
+.custom-select.d-block.w-800 {
+    width: 800px;
+    border: 1px solid #141E46;
+    -webkit-border-top-right-radius: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    -moz-border-radius-topright: 15px;
+    -moz-border-radius-bottomright: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 2px;
+  }
+#nat{
+  border-radius: 15px;
+width:150px;
+}
+#state{
+  border-radius: 15px;
+width:150px;
+}
+.button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+</style>
+    <body style="background-color:#65b7e0">
+        <nav class="navbar" style="background-color: #141E46;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="https://www.cbit.ac.in/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Chaitanya_Bharathi_Institute_of_Technology_logo.png" alt="Logo" width="30" height="34" class="d-inline-block align-text-top">
+                <span style="vertical-align: middle">&nbsp;Event Management System</span>
+              </a>
+
+              <form class="d-flex" role="search">
+                {% csrf_token %}
+                <button class="btn btn-outline-success" type="submit" style="background-color: #FFF9C9; border-color: #862B0D; color:#862B0D"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+                </svg></button>
+              </form>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="py-5 text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-box-arrow-in-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
+                    <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                  </svg>
+                  <br>
+              <h2><b>Update</b></h2>
+            </div>
+            <div class="row">
+              <div class="col-2">
+
+              </div>
+              <div class="col-8">
+                <h4 class="mb-3">Update your Event Details: </h4>
+                
+                <form method="POST" action="/update/{{research.id}}" class="needs-validation" novalidate="">
+                  {% csrf_token %}
+                  <input type="hidden" class="form-control" name="cname" id="id_tname"  value="{{research.cname}}" >
+                <input type="hidden" class="form-control" name="cemail" id="id_temail"  value="{{research.cemail}}" >
+                <input type="hidden" class="form-control" name="cdesc" id="id_temail"  value="{{research.cdesc}}" >
+                      <label for="firstName">Name of Event<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label>
+                      <input type="text" class="form-control" id="firstName" name="ename" placeholder="" value="{{research.ename}}" required="">
+                      <div class="invalid-feedback">
+                        Please enter a valid event name.
+                  </div><br>
+                  <div class="button-container">
+                    <div class="hod">
+                  <label for="time">Time of Event<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label>
+                      <input type="text" class="form-control" id="time" name="etime" placeholder="(9:00 am)" value="{{research.etime}}" required="">
+                      <div class="invalid-feedback">
+                        Please enter a valid time name.
+                  </div><br></div><div class="hod">
+                  <label for="time">Venue of Event<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label>
+                      <input type="text" class="form-control" id="venue" name="evenue" placeholder="(Assembly Hall)" value="{{research.evenue}}" required="">
+                      <div class="invalid-feedback">
+                        Please enter a valid venue name.
+                  </div><br></div>
+    <div class="row justify-content"><div class="hod">
+        <label for="date">Date of Event<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
+        <div class="col-5">
+            
+            <input id="startDate" name="edate" class="form-control" type="date" value="{{research.edate}}"/>
+            <span id="startDateSelected"></span>
+        </div>
+    </div><br>
+</div></div>
+                  <div class="mb-3">
+                    <label for="desc" required="">Description<span class="mand" style="color: #9f330f;">&nbsp;*</span></label>
+                    <input type="text" class="form-control" id="email" name="edesc" placeholder="A description of the event" value="{{research.edesc}}" >
+                  </div>
+                 <!-- <div class="mb-3">
+                    <label for="desc" required="">Short Description<span class="mand" style="color: #9f330f;">&nbsp;*</span></label>
+                    <textarea class="form-control" id="email" placeholder="A one-two line description of the event." rows="2"></textarea>
+                  </div>-->
+
+                  <div class="mb-3">
+                    <label for="desc" required="">Type of event<span class="mand" style="color: #9f330f;">&nbsp;*</span></label>
+                    <input type="text" class="form-control" id="email" name="etype" placeholder="A description of the event" value="{{research.etype}}" >
+                  </div>
+                  <div class="mb-3">
+                    <label for="desc" required="">Eligibility<span class="mand" style="color: #9f330f;">&nbsp;*</span></label>
+                    <input type="text" class="form-control" id="email" name="eligibility" placeholder="A description of the event" value="{{research.eligibility}}" >
+                  </div>
+                  <!--<div class="row">
+                    <div class="col-md-5 mb-3">
+                      <label for="nat">Type of Event<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
+                      <br>
+                      <div class="selectWrapper">
+                      <select class="custom-select d-block w-800" name="etype" id="nat" required="">
+                        <option value="">Choose</option>
+                        <option>Seminar</option>
+                        <option>Workshop</option>
+                        <option>Hackathon</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                      <div class="invalid-feedback">
+                        Please select a valid option.
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="mb-3">
+                        <label for="imageInput" class="form-label">Upload Poster<span class="mand" style="color: #9f330f;">&nbsp;*</span></label>
+                        <input type="file" class="form-control" id="imageInput" accept="image/*">
+                    </div>-->
+                      
+                    
+                    <!--<div class="col-md-4 mb-3">
+                        <label for="state">Eligibility(Departments)<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
+                        <br>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="CSE" name="CSE" value="CSE" checked>
+                        <label class="form-check-label" for="CSE">CSE</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="AIML" name="AIML" value="AIML">
+                        <label class="form-check-label" for="AIML">AIML</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="MECHANICAL" name="MECHANICAL" value="MECHANICAL">
+                        <label class="form-check-label" for="MECHANICAL">MECHANICAL</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="CIVIL" name="CIVIL" value="CIVIL">
+                        <label class="form-check-label" for="CIVIL">CIVIL</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="BIOTECHNOLOGY" name="BIOTECHNOLOGY" value="BIOTECHNOLOGY">
+                        <label class="form-check-label" for="BIOTECHNOLOGY">BIOTECHNOLOGY</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="CHEMICAL" name="CHEMICAL" value="CHEMICAL">
+                        <label class="form-check-label" for="CHEMICAL">CHEMICAL</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="AIDS" name="AIDS" value="AIDS">
+                        <label class="form-check-label" for="AIDS">AIDS</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="IT" name="IT" value="IT">
+                        <label class="form-check-label" for="IT">IT</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="ECE" name="ECE" value="ECE">
+                        <label class="form-check-label" for="ECE">ECE</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="EEE" name="EEE" value="EEE">
+                        <label class="form-check-label" for="EEE">EEE</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="MBA" name="MBA" value="MBA">
+                        <label class="form-check-label" for="MBA">MBA</label>
+                      </div>
+                      </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="state">Eligibility(Year)<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
+                        <br>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+                        <label class="form-check-label" for="check1">1st Year</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                        <label class="form-check-label" for="check2">2nd Year</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something">
+                        <label class="form-check-label" for="check3">3rd Year</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+                        <label class="form-check-label" for="check4">4th Year</label>
+                      </div>
+                      </div>-->
+                      
+        <br>
+<div class="mb-3">
+    <label for="field">Registration Fees <span>(₹) </span><span class="mand" style="color: #9f330f;">&nbsp;*</span></label>
+    <input type="text" class="form-control" id="field" name="efee" placeholder="0" value="{{research.efee}}" required="">
+    <div class="invalid-feedback">
+        Please enter a correct field.
+    </div>
+</div>
+          
+                    <!--<div class="mb-3">
+                      <label for="field">Contact Details: <span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
+                      <input type="text" class="form-control" id="field" placeholder="Enter contact details of someone from your club." required="">
+                      <div class="invalid-feedback">
+                        Please enter a correct field.
+                      </div>
+                    </div>-->
+        
+                    <div class="mb-3">
+                      <label for="link">Registration Link<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
+                      <input type="text" class="form-control" name="elink" id="address2" value="{{research.elink}}" required=" " placeholder="Provide a link for students to register">
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="link">Image URL<span class="mand" style="color: #9f330f;">&nbsp;*</span></label></label></label>
+                      <input type="text" class="form-control" name="eimg" id="address2" value="{{research.eimg}}" required=" " placeholder="Provide a link for students to register">
+                    </div>
+
+                  <div class="col-3">
+                  <button class="btn btn-primary btn-lg btn-block" type="submit" style="background-color: #9f330f;">Submit</button>
+                </form>
+          </div>
+</div></div>
+          
+
+    </body>
+</html>

@@ -1,0 +1,240 @@
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viewers</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+  <style></style>
+  <script type="text/javascript" src=""></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+</head>
+<style>
+  .card{
+      background-color: #a2bbdbf0;
+  }
+</style>
+<body oncontextmenu="return false" class="snippet-body" style="background-image:url('https://cutewallpaper.org/21/rainy-weather-wallpaper/Wallpaper-MiUI-8-Rainy-Weather-background-Minimal-HD-.png');">
+  <nav class="navbar" style="background-color: #141E46;vertical-align: middle;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.cbit.ac.in/" target="_blank" style="vertical-align: middle;">
+            <span style="vertical-align: middle;"><p style="color:aliceblue">&nbsp;Event Management System</p></span>
+        </a>
+<div class="inner" style="vertical-align: middle;padding: 5 0 0 0 ">
+        <form class="d-flex" role="search">
+            {% csrf_token %}
+            <a href="/accounts/login/" style="color: white; text-decoration: none; font-family: 'Young Serif', serif; font-size:20px;vertical-align: middle; ">Login</a>
+            <span style="color: white; padding: 0 6px;vertical-align: middle">|</span>
+            <a href="/register/" style="color: white; text-decoration: none; font-family: 'Young Serif', serif;font-size:20px;vertical-align: middle">Register</a>
+        </form>
+    </div></div>
+</nav>
+
+<section class="pt-5 pb-5">
+<div class="container">
+<div class="row">
+<div class="col-6">
+<h2 class="mb-3" style="font-family: 'Young Serif', serif; color: #FFF9C9">Upcoming Events </23>
+</div>
+<div class="col-6 text-right">
+<a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev" style="background-color: #141E46;">
+<i class="fa fa-arrow-left"></i>
+</a>
+<a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next" style="background-color: #141E46;">
+<i class="fa fa-arrow-right"></i>
+</a>
+</div>
+<div class="col-12">
+<div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+<div class="carousel-inner">
+<!--<div class="carousel-item active">
+<div class="row">
+
+<div class="col-md-4 mb-3">
+  <div class="card">
+      <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+      <div class="card-body">
+          <h4 class="card-title">Special title treatment</h4>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <div class="card-details">
+              <p class="card-text"><strong>Organised by: </strong> Your Club Name</p>
+              <p class="card-text"><strong>Date:</strong> October 15, 2023</p>
+              <p class="card-text"><strong>Time:</strong> 2:00 PM</p>
+              <p class="card-text"><strong>Location:</strong> Your Event Location</p>
+              <p class="card-text"><strong>Registration Fee:</strong>Rs 0</p>
+
+          </div>
+      </div>
+  </div>
+  
+</div>
+<div class="col-md-4 mb-3">
+  <div class="card">
+      <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+      <div class="card-body">
+          <h4 class="card-title">Special title treatment</h4>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <div class="card-details">
+              <p class="card-text"><strong>Organised by: </strong> Your Club Name</p>
+              <p class="card-text"><strong>Date:</strong> October 15, 2023</p>
+              <p class="card-text"><strong>Time:</strong> 2:00 PM</p>
+              <p class="card-text"><strong>Location:</strong> Your Event Location</p>
+              <p class="card-text"><strong>Registration Fee:</strong>Rs 0</p>
+
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 mb-3">
+  <div class="card">
+      <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
+      <div class="card-body">
+          <h4 class="card-title">Special title treatment</h4>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <div class="card-details">
+              <p class="card-text"><strong>Organised by: </strong> Your Club Name</p>
+              <p class="card-text"><strong>Date:</strong> October 15, 2023</p>
+              <p class="card-text"><strong>Time:</strong> 2:00 PM</p>
+              <p class="card-text"><strong>Location:</strong> Your Event Location</p>
+              <p class="card-text"><strong>Registration Fee:</strong>Rs 0</p>
+
+          </div>
+      </div>
+  </div>
+</div>
+
+</div>
+</div>-->
+<div class="carousel-item-active">
+<div class="row">
+{% for res in research %}
+<div class="col-md-4 mb-3">
+  <div class="card">
+    <center>
+      <img class="img-fluid" alt="100%x280" style="object-fit:contain;" src={{res.eimg}}></center>
+      <div class="card-body">
+          <h4 class="card-title">{{res.ename}}</h4>
+          <p class="card-text">{{res.desc}}</p>
+          <div class="card-details">
+              <p class="card-text"><strong>Organised by: </strong> {{res.cname}}</p>
+              <p class="card-text"><strong>Date: </strong> {{res.edate}}</p>
+              <p class="card-text"><strong>Time: </strong> {{res.etime}}</p>
+              <p class="card-text"><strong>Location: </strong> {{res.evenue}}</p>
+              <p class="card-text"><strong>Registration Fee: </strong>Rs {{res.efee}}</p>
+              <p class="card-text"><strong>Description: </strong>{{res.edesc}}</p>
+              <p class="card-text"><strong>To register: </strong><a href="{{res.elink}}">{{res.elink}}</a></p>
+
+          </div>
+      </div>
+
+  </div>
+</div>
+{%endfor%}
+
+
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="pt-5 pb-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <h2 class="mb-3" style="font-family: 'YoungSerif'; color: #FFF9C9"><b></b></h2>
+          </div>
+      </div>
+      <div class="row" id="club-logos">
+          <!-- Add club logos here with data- attributes -->
+          <div class="col-2">
+              <div class="club-logo" data-toggle="modal" data-target="#club1Modal">
+                  <img src="https://tse2.mm.bing.net/th?id=OIP.kFUWItud-ls5mIUukFDeNwAAAA&pid=Api&P=0&h=180" alt="Club 1" class="rounded-circle" style="height:150px;width:150px;">
+              </div>
+          </div>
+          <div class="col-2">
+              <div class="club-logo" data-toggle="modal" data-target="#club2Modal">
+                  <img src="https://media.discordapp.net/attachments/1154855360084062320/1160489040513093672/9k.png?ex=6534d8a4&is=652263a4&hm=44e117ade54fbaf019482c9329d7d5dfa2316f0322c662ea734c04bc23045fc4&=&width=281&height=281" style="height:150px;width:150px;" alt="Club 2" class="rounded-circle">
+              </div>
+          </div>&nbsp; &nbsp;
+          <div class="col-2" style="position:relative;left:40px;">
+              <div class="club-logo" data-toggle="modal" data-target="#club2Modal">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQommTXxbieV7_ntUsKK5oM1czVKQMQjeH3Ri8IYzfEAVzqO4w6uAivpPGHCPRVRE7GkX0&usqp=CAU" style="height:150px;width:150px;" alt="Club 2" class="rounded-circle" >
+              </div>
+          </div>
+          <div class="col-2" style="position:relative;left:70px;">
+              <div class="club-logo" data-toggle="modal" data-target="#club2Modal">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKxtz4up-Wk3Nide_8AWSK70XfmmbvQgsgS4GoqF5sE_OFa8xxv6jVBiGohMdcLZjKrZk&usqp=CAU"  style="height:150px;width:150px;" alt="Club 2" class="rounded-circle">
+              </div>
+          </div>
+          <!-- Add more club logos here -->
+      </div>
+  </div>
+  
+<div class="modal fade" id="club1Modal" tabindex="-1" role="dialog" aria-labelledby="club1ModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="club1ModalLabel">About Us...</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <!-- Add club 1 logo image here -->
+
+              <p>COSC, an esteemed tech community based in Chaitanya Bharathi Institute of Technology - Hyderabad, is dedicated to promoting an open-source ethos. We organize a diverse range of events such as hackathons, bootcamps, and workshops, aimed at educating students about various technologies while actively fostering a culture of open source.
+
+                In these dynamic gatherings, students immerse themselves in collaborative coding sessions, innovative problem-solving challenges, and hands-on experiences, all centered around open source principles. By embracing this approach, we empower students to not only learn about cutting-edge technologies but also actively contribute to their development and dissemination.</p>
+              <!-- Add more club information as needed -->
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Club 2 Modal -->
+<div class="modal fade" id="club2Modal" tabindex="-1" role="dialog" aria-labelledby="club2ModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="club2ModalLabel">Club 2 Information</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <!-- Add club 2 information here -->
+              <p>Description: This is Club 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <!-- Add more club information as needed -->
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+</body>
+
+</html>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript"></script>
+
+</body></html>
